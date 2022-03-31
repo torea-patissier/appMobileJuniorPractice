@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
-import Stack from './routes/StackNavigation';
-
+import MyDrawer from './routes/DrawerNav';
 export default function App() {
 
   return (
-    <Stack/>
+      <>
+      <MyDrawer/>
+      {/* <TabNav/> */}
+      </>
   );
 
 }

@@ -4,11 +4,11 @@ export const globalStyle = StyleSheet.create({
 
     //CONNEXION
     input: {
-      height: 40,
       margin: 12,
       borderWidth: 1,
       padding: 25,
       borderRadius:5,
+
     },
 
     buttonConnexion: {
@@ -17,6 +17,7 @@ export const globalStyle = StyleSheet.create({
       marginHorizontal:55,
       borderRadius:5,
       alignItems:'center',
+      marginBottom: 20,
     },
 
     textConnexion: {
@@ -27,7 +28,7 @@ export const globalStyle = StyleSheet.create({
     contentConnexion: {
       justifyContent:'center',
       flex:1,
-      marginBottom:70,
+      marginBottom:30,
     },
     // CONNEXION
 
