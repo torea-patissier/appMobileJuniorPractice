@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
-import Stack from './StackNavigation';
-
+import BottomTabNav from './BottomTabNav';
 const RouteConfigs = {
 
     Accueil:
     {
-        screen : Stack
+        screen : BottomTabNav,
     }
 }
 

@@ -29,3 +29,12 @@ export default function Home({ navigation }) {
     </View>
     );
 }
+
+Home.navigationOptions = ({navigation}) => {
+  console.log(navigation);
+
+  return{
+    
+  }
+
+}
