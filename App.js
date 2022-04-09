@@ -10,3 +10,11 @@ export default function App() {
   );
 
 }
+
+/**
+ * Ordre de la navigation de haut en bas dans l'ordre de la pile
+ * App.js
+ * Drawer
+ * TabNav
+ * StackNav
+*/

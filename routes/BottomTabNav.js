@@ -5,6 +5,7 @@ import LoginCompany from '../screens/LoginCompany';
 import LoginStudent from '../screens/LoginStudent';
 import { MaterialIcons } from '@expo/vector-icons';
 
+//Je configure mes routes pour la TabNav
 const RouteConfigs = {
     Home:{
         screen : Stack,
@@ -35,6 +36,7 @@ const RouteConfigs = {
     }
 }
 
+//Je customize les routes de la TabNav
 const TabNavigatorConfig = {
 
     tabBarOptions: {
@@ -51,3 +53,11 @@ const TabNavigatorConfig = {
 
 const BottomTabNav = createBottomTabNavigator(RouteConfigs, TabNavigatorConfig);
 export default BottomTabNav;
+
+/**
+ * Ordre de la navigation de haut en bas dans l'ordre de la pile
+ * App.js
+ * Drawer
+ * TabNav
+ * StackNav
+*/

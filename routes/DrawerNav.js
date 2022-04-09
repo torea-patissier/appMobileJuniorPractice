@@ -12,3 +12,11 @@ const RouteConfigs = {
 
 const MyDrawer = createDrawerNavigator(RouteConfigs);
 export default createAppContainer(MyDrawer);
+
+/**
+ * Ordre de la navigation de haut en bas dans l'ordre de la pile
+ * App.js
+ * Drawer
+ * TabNav
+ * StackNav
+*/

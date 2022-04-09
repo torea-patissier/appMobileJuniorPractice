@@ -33,3 +33,11 @@ const screens = {
 
 const Stack = createStackNavigator(screens);
 export default Stack;
+
+/**
+ * Ordre de la navigation de haut en bas dans l'ordre de la pile
+ * App.js
+ * Drawer
+ * TabNav
+ * StackNav
+*/
