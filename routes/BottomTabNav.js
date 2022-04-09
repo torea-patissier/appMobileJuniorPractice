@@ -3,24 +3,51 @@ import Stack from './StackNavigation';
 import Selected from '../screens/Selected';
 import LoginCompany from '../screens/LoginCompany';
 import LoginStudent from '../screens/LoginStudent';
+import { MaterialIcons } from '@expo/vector-icons';
+
 const RouteConfigs = {
-    Home : 
-    {
+    Home:{
         screen : Stack,
+        navigationOptions : {
+            tabBarIcon: ({tintColor}) => <MaterialIcons name="home" size={24} color={tintColor}/>
+            /**
+             * https://icons.expo.fyi/MaterialIcons/home
+             */
+        }
     },
-    Selected : 
-    {
+    Selected:{
         screen : Selected,
+        navigationOptions : {
+            tabBarIcon: ({tintColor}) => <MaterialIcons name="notifications" size={24} color={tintColor}/>
+        }
     },
-    Entreprise:
-    {
+    Company:{
         screen : LoginCompany,
+        navigationOptions : {
+            tabBarIcon: ({tintColor}) => <MaterialIcons name="assignment-ind" size={24} color={tintColor}/>
+        }
     },
-    Etudiant:
-    {
-        screen : LoginStudent
+    Student:{
+        screen : LoginStudent,
+        navigationOptions : {
+            tabBarIcon: ({tintColor}) => <MaterialIcons name="person" size={24} color={tintColor}/>
+        }
     }
 }
 
-const BottomTabNav = createBottomTabNavigator(RouteConfigs);
+const TabNavigatorConfig = {
+
+    tabBarOptions: {
+        activeTintColor: 'blue',
+        labelStyle: {
+          fontSize: 12,
+        },
+    },      
+}
+
+/**
+ * https://reactnavigation.org/docs/4.x/bottom-tab-navigator
+ */
+
+const BottomTabNav = createBottomTabNavigator(RouteConfigs, TabNavigatorConfig);
 export default BottomTabNav;
