@@ -40,7 +40,7 @@ const RouteConfigs = {
 const TabNavigatorConfig = {
 
     tabBarOptions: {
-        activeTintColor: 'blue',
+        activeTintColor: '#0070FF',
         labelStyle: {
           fontSize: 12,
         },

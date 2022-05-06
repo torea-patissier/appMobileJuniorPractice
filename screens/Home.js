@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button, Pressable, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Button, Pressable, TextInput, TouchableOpacity } from 'react-native';
 import { globalStyle } from '../styles/AppStyles';
 
 // import React, {useEffect} from 'react';
@@ -8,33 +8,52 @@ export default function Home({ navigation }) {
   
     return (
     <View
-    style={globalStyle.homeStyle}
+    style={globalStyle.backgroundHome}
     >
       <Text
       style={ globalStyle.textHome }
       >Bienvenue sur Junior !
       </Text>
-      <Button
-      title="Se connecter en tant qu'étudiant"
-      // onPress={navigation.navigate('LoginStudent')}
+
+      <TouchableOpacity
       onPress = {() => navigation.navigate('LoginStudent')}
-      />
-
-      <Button
-      title="Se connecter en tant qu'entreprise"
-      // onPress={navigation.navigate('LoginStudent')}
+      >
+        <View
+        style={globalStyle.buttonConnexion}
+        >
+        <Text 
+        style={globalStyle.textConnexion}>
+          Je suis un étudiant</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
       onPress = {() => navigation.navigate('LoginCompany')}
-      />
-
+      >
+        <View
+        style={globalStyle.buttonConnexion}
+        >
+        <Text 
+        style={globalStyle.textConnexion}>
+          Je suis une entreprise</Text>
+        </View>
+      </TouchableOpacity>
     </View>
     );
 }
 
 Home.navigationOptions = ({navigation}) => {
-  console.log(navigation);
+  // console.log(navigation);
+  const axios = require('axios');
 
-  return{
-    
-  }
+//   axios.get('https://api.torea-patissier.students-laplateforme.io/api/cities').then(resp => {
+
+//     console.log(resp.data.id);
+// });
+
+  axios.get('https://api.torea-patissier.students-laplateforme.io/api/cities')
+    .then(rep => {
+      // en cas de réussite de la requête
+      console.log(rep.data);
+    })
 
 }

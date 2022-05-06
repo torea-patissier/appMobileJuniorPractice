@@ -12,17 +12,17 @@ export const globalStyle = StyleSheet.create({
     },
 
     buttonConnexion: {
-      backgroundColor:'skyblue',
-      padding:20,
+      backgroundColor:'white',
+      padding:15,
       marginHorizontal:55,
       borderRadius:5,
       alignItems:'center',
-      marginBottom: 20,
+      marginBottom: 10,
     },
 
     textConnexion: {
       fontSize:20,
-      color:'white',
+      color:'black',
     },
     
     contentConnexion: {
@@ -38,10 +38,18 @@ export const globalStyle = StyleSheet.create({
       justifyContent:'center',
     },
     
+    backgroundHome:{
+      backgroundColor:'#0070FF',
+      flex:1,
+      justifyContent:'center',
+    },
+    
     textHome: {
       fontSize:25,
       textAlign:'center',
       marginBottom:20,
+      color:'white',
+      fontWeight: 'bold',
     },
     //ACCUEIL
 
